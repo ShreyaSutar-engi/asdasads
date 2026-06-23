@@ -315,6 +315,7 @@ h2::after {
 .detail-header h2 { margin-bottom: 0.4rem; }
 .detail-header h2::after { display: none; }
 .detail-tagline { font-size: 0.975rem; color: var(--muted); max-width: 480px; }
+.detail-btns { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
 
 .detail-block { margin-bottom: 2.75rem; }
 .detail-block h4 {
