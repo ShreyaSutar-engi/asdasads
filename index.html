@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- ── Nav ──────────────────────────────────────── -->
+  <!-- ── Nav ────────────────────────────────────────── -->
   <nav id="nav">
     <div class="nav-wrap">
       <a href="#hero" class="nav-logo">SS</a>
@@ -25,7 +25,7 @@
     </div>
   </nav>
 
-  <!-- ── Hero ─────────────────────────────────────── -->
+  <!-- ── Hero ─────────────────────────────────────────── -->
   <section id="hero">
     <div class="pcb-grid" aria-hidden="true"></div>
     <div class="pcb-fade" aria-hidden="true"></div>
@@ -63,7 +63,7 @@
     </div>
   </section>
 
-  <!-- ── About ─────────────────────────────────────── -->
+  <!-- ── About ─────────────────────────────────────────── -->
   <section id="about">
     <div class="site-wrap">
       <div class="about-layout">
@@ -97,7 +97,7 @@
     </div>
   </section>
 
-  <!-- ── Projects ──────────────────────────────────── -->
+  <!-- ── Projects ───────────────────────────────────────── -->
   <section id="projects">
     <div class="site-wrap">
       <h2 class="sec-label" data-reveal>[ Projects ]</h2>
@@ -121,7 +121,7 @@
     </div>
   </section>
 
-  <!-- ── PandaWare Detail ───────────────────────────── -->
+  <!-- ── PandaWare Detail ─────────────────────────────────── -->
   <section id="pandaware">
     <div class="site-wrap">
 
@@ -138,7 +138,7 @@
           <p class="detail-sub">EMG-controlled myoelectric prosthetic hand, built from scratch.</p>
         </div>
         <div class="detail-actions">
-          <a href="Shreya_Sutar_Official_Paper.pdf" class="btn-primary" target="_blank" rel="noopener">Read the Paper ↗</a>
+          <a href="Shreya_Sutar_Official_Paper.pdf" class="btn-secondary" target="_blank" rel="noopener">Read the Paper ↗</a>
           <a href="Shreya_Sutar_Official_Poster.pdf" class="btn-secondary" target="_blank" rel="noopener">Read the Poster ↗</a>
           <a href="https://drive.google.com/file/d/1aEplw--r2NXagsUH0YUOPjhpAVwstKOR/view?usp=sharing" class="btn-secondary" target="_blank" rel="noopener">Documentation Log ↗</a>
         </div>
@@ -161,28 +161,40 @@
         <h3 class="block-label">Overview</h3>
         <div class="overview-grid">
           <div class="overview-card" data-reveal>
-            <span class="overview-num">[ 01 ]</span>
-            <div class="overview-rule"></div>
-            <h4 class="overview-title">Full Mechanical Design</h4>
-            <p class="overview-desc">Multiple 3D-printed iterations refining geometry for fit, range of motion, and durability across every finger joint.</p>
+            <div class="overview-card-text">
+              <span class="overview-num">[ 01 ]</span>
+              <div class="overview-rule"></div>
+              <h4 class="overview-title">Full Mechanical Design</h4>
+              <p class="overview-desc">Multiple 3D-printed iterations refining geometry for fit, range of motion, and durability across every finger joint.</p>
+            </div>
+            <div class="overview-card-img placeholder" aria-hidden="true"></div>
           </div>
           <div class="overview-card" data-reveal>
-            <span class="overview-num">[ 02 ]</span>
-            <div class="overview-rule"></div>
-            <h4 class="overview-title">Custom Circuit Design</h4>
-            <p class="overview-desc">Integrated servo control, EMG acquisition, and power sensing on a single hand-assembled system.</p>
+            <div class="overview-card-text">
+              <span class="overview-num">[ 02 ]</span>
+              <div class="overview-rule"></div>
+              <h4 class="overview-title">Custom Circuit Design</h4>
+              <p class="overview-desc">Integrated servo control, EMG acquisition, and power sensing on a single hand-assembled system.</p>
+            </div>
+            <div class="overview-card-img placeholder" aria-hidden="true"></div>
           </div>
           <div class="overview-card" data-reveal>
-            <span class="overview-num">[ 03 ]</span>
-            <div class="overview-rule"></div>
-            <h4 class="overview-title">EMG Signal Pipeline</h4>
-            <p class="overview-desc">Adaptive normalization enabling reliable grip detection across varying muscle fatigue and electrode placement.</p>
+            <div class="overview-card-text">
+              <span class="overview-num">[ 03 ]</span>
+              <div class="overview-rule"></div>
+              <h4 class="overview-title">EMG Signal Pipeline</h4>
+              <p class="overview-desc">Adaptive normalization enabling reliable grip detection across varying muscle fatigue and electrode placement.</p>
+            </div>
+            <div class="overview-card-img placeholder" aria-hidden="true"></div>
           </div>
           <div class="overview-card" data-reveal>
-            <span class="overview-num">[ 04 ]</span>
-            <div class="overview-rule"></div>
-            <h4 class="overview-title">Closed-Loop Safety</h4>
-            <p class="overview-desc">Real-time current sensing via INA219 limits grip force automatically, preventing damage to objects.</p>
+            <div class="overview-card-text">
+              <span class="overview-num">[ 04 ]</span>
+              <div class="overview-rule"></div>
+              <h4 class="overview-title">Closed-Loop Safety</h4>
+              <p class="overview-desc">Real-time current sensing via INA219 limits grip force automatically, preventing damage to objects.</p>
+            </div>
+            <div class="overview-card-img placeholder" aria-hidden="true"></div>
           </div>
         </div>
       </div>
@@ -224,7 +236,7 @@
     </div>
   </section>
 
-  <!-- ── Tech Stack ─────────────────────────────────── -->
+  <!-- ── Tech Stack ───────────────────────────────────────── -->
   <section id="stack">
     <div class="site-wrap">
       <h2 class="sec-label" data-reveal>[ Tech Stack ]</h2>
@@ -245,6 +257,7 @@
           </div>
           <h3 class="stack-name">RP2040</h3>
           <p class="stack-desc">Dual-core ARM Cortex-M0+ at 133 MHz. Main compute unit controlling servo PWM output, I²C sensor bus, and real-time EMG acquisition loop.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
@@ -260,6 +273,7 @@
           </div>
           <h3 class="stack-name">MicroPython</h3>
           <p class="stack-desc">Python-based firmware running on the RP2040. Handles the full signal processing pipeline, servo control loop, and I²C bus coordination.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
@@ -274,6 +288,7 @@
           </div>
           <h3 class="stack-name">MyoWare 2.0</h3>
           <p class="stack-desc">Surface electromyography sensor capturing forearm muscle activation. Outputs an analog voltage representing muscle contraction intensity for grip detection.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
@@ -290,6 +305,7 @@
           </div>
           <h3 class="stack-name">PCA9685</h3>
           <p class="stack-desc">16-channel PWM/servo driver over I²C. Generates precise servo signals for all 5 finger motors, offloading timing-critical work from the main CPU.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
@@ -304,6 +320,7 @@
           </div>
           <h3 class="stack-name">INA219</h3>
           <p class="stack-desc">High-side DC current and power sensor over I²C. Monitors servo current draw in real time for closed-loop grip force limiting and object safety.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
@@ -319,6 +336,7 @@
           </div>
           <h3 class="stack-name">MG996R Servos</h3>
           <p class="stack-desc">High-torque metal gear servos, one per finger. Drive tendon cables through 3D-printed finger channels for independent, human-like digit actuation.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
@@ -335,6 +353,7 @@
           </div>
           <h3 class="stack-name">FDM 3D Printing</h3>
           <p class="stack-desc">Fused deposition modeling in PLA+. Multiple design iterations per finger joint to refine range of motion, tendon routing, and structural durability.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
@@ -350,13 +369,14 @@
           </div>
           <h3 class="stack-name">Tendon Actuation</h3>
           <p class="stack-desc">Stainless steel cables routed through finger channels, anchored at fingertip and servo horn. Lightweight, human-analogous flexion with minimal moving parts.</p>
+          <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ── Skills ─────────────────────────────────────── -->
+  <!-- ── Skills ─────────────────────────────────────────── -->
   <section id="skills">
     <div class="site-wrap">
       <h2 class="sec-label" data-reveal>[ Skills ]</h2>
@@ -410,18 +430,18 @@
     </div>
   </section>
 
-  <!-- ── Contact CTA ───────────────────────────────── -->
+  <!-- ── Contact CTA ───────────────────────────────────── -->
   <section id="contact">
     <div class="contact-bg" aria-hidden="true"></div>
     <div class="site-wrap contact-inner">
       <p class="contact-eyebrow" data-reveal>[ Let's Connect ]</p>
       <h2 class="contact-heading" data-reveal>Building something<br>that matters.</h2>
       <p class="contact-sub" data-reveal>Whether you're a researcher, engineer, or just curious — I'd love to talk about hardware, prosthetics, and building things that change lives.</p>
-      <a href="mailto:shreyashreya65417@gmail.com" class="btn-primary contact-btn" data-reveal>Send a Message ↗</a>
+      <a href="mailto:shreya.sutar057@gmail.com" class="btn-primary contact-btn" data-reveal>Send a Message ↗</a>
     </div>
   </section>
 
-  <!-- ── Footer ────────────────────────────────────── -->
+  <!-- ── Footer ──────────────────────────────────────────── -->
   <footer id="footer">
     <div class="site-wrap footer-inner">
       <div class="footer-brand-col">
@@ -452,7 +472,7 @@
       <div class="footer-nav-col">
         <span class="footer-col-label">Contact</span>
         <ul>
-          <li><a href="mailto:shreyashreya65417@gmail.com">Email ↗</a></li>
+          <li><a href="mailto:shreya.sutar057@gmail.com">Email ↗</a></li>
         </ul>
       </div>
     </div>

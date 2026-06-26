@@ -21,8 +21,8 @@
   --surface:      #141414;
   --surface-2:    #1A1A1A;
   --text:         #E8E2D9;      /* warm white */
-  --muted:        #888880;      /* readable warm gray — ~5:1 on --bg */
-  --muted-hi:     #B0A898;      /* lighter gray for list items */
+  --muted:        #9E9890;      /* readable warm gray */
+  --muted-hi:     #C8C0B4;      /* lighter gray for body text */
   --accent:       #E8922E;      /* warm amber / PCB gold-orange */
   --accent-2:     #F5C842;      /* bright gold */
   --accent-dim:   #C97A22;
@@ -347,14 +347,14 @@ section { padding: var(--s12) 0; }
 }
 .hstat-n {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.02em;
   line-height: 1;
 }
 .hstat-l {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: var(--muted);
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -667,7 +667,7 @@ section { padding: var(--s12) 0; }
 /* ── Overview grid (Emma Rose numbered panels) ─────── */
 .overview-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--s4);
 }
 
@@ -677,14 +677,27 @@ section { padding: var(--s12) 0; }
   border-radius: var(--r-lg);
   padding: var(--s5);
   display: flex;
-  flex-direction: column;
-  gap: var(--s3);
+  flex-direction: row;
+  gap: var(--s5);
+  align-items: stretch;
   transition: border-color 0.22s, transform 0.2s, box-shadow 0.22s;
 }
 .overview-card:hover {
   border-color: var(--border-hi);
   transform: translateY(-4px);
   box-shadow: 0 20px 56px rgba(0,0,0,0.55);
+}
+.overview-card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+.overview-card-img {
+  width: 160px;
+  flex-shrink: 0;
+  border-radius: var(--r);
+  min-height: 120px;
 }
 
 .overview-num {
@@ -703,7 +716,7 @@ section { padding: var(--s12) 0; }
 
 .overview-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.015em;
@@ -711,7 +724,7 @@ section { padding: var(--s12) 0; }
 }
 
 .overview-desc {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--muted-hi);
   line-height: 1.75;
 }
@@ -775,11 +788,27 @@ section { padding: var(--s12) 0; }
   gap: var(--s2);
   transition: border-color 0.22s, transform 0.2s, box-shadow 0.22s;
   cursor: default;
+  position: relative;
+  overflow: hidden;
 }
 .stack-item:hover {
   border-color: var(--border-hi);
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(232,146,46,0.1);
+}
+.stack-img {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-lg);
+  transform: translateY(101%);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stack-item:hover .stack-img {
+  transform: translateY(0);
 }
 
 .stack-item-top {
@@ -822,7 +851,7 @@ section { padding: var(--s12) 0; }
 
 .stack-name {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.015em;
@@ -830,8 +859,8 @@ section { padding: var(--s12) 0; }
 }
 
 .stack-desc {
-  font-size: 0.82rem;
-  color: var(--muted);
+  font-size: 0.95rem;
+  color: var(--muted-hi);
   line-height: 1.7;
   flex: 1;
 }
@@ -1046,6 +1075,8 @@ section { padding: var(--s12) 0; }
 }
 
 @media (max-width: 780px) {
+  .overview-card { flex-direction: column; }
+  .overview-card-img { width: 100%; min-height: 160px; }
   .about-layout { grid-template-columns: 1fr; gap: var(--s6); }
   .skills-grid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
@@ -1063,7 +1094,6 @@ section { padding: var(--s12) 0; }
   .hstat-div { width: 2.5rem; height: 1px; margin-left: var(--s4); }
   .hstat { padding: var(--s1) var(--s4); }
   .stack-grid { grid-template-columns: repeat(2, 1fr); }
-  .overview-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
