@@ -115,6 +115,12 @@
       "skillPath": ".agents/skills/security-research/SKILL.md",
       "computedHash": "5ecc638e56f060b795b35c2aabe28a40a406c45c24976835d2294b48f8ee3314"
     },
+    "swiftui-skills": {
+      "source": "ameyalambat128/swiftui-skills",
+      "sourceType": "github",
+      "skillPath": "src/skill/SKILL.md",
+      "computedHash": "5926fb96cd6ea9cabade596434b383371f9290a25862b29c2c519e5e4afc19cd"
+    },
     "tech-debt-audit": {
       "source": "code-yeongyu/oh-my-opencode",
       "sourceType": "github",
