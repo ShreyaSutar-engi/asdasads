@@ -219,8 +219,6 @@ section { padding: var(--s12) 0; }
   letter-spacing: 0.1em;
   color: var(--accent-2);
   margin-bottom: var(--s4);
-  /* initial state for GSAP timeline entrance */
-  opacity: 0;
 }
 
 .hero-name {
@@ -252,11 +250,9 @@ section { padding: var(--s12) 0; }
   max-width: 480px;
   line-height: 1.75;
   margin-bottom: var(--s8);
-  opacity: 0; /* GSAP entrance */
 }
 
 .hero-cta {
-  opacity: 0; /* GSAP entrance */
 }
 
 /* ══════════════════════════════════════════════════════

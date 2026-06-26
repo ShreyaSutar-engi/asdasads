@@ -36,6 +36,9 @@ mm.add('(prefers-reduced-motion: reduce)', () => {
    Chars clip-reveal from below (overflow:hidden on .name-line).
    ═══════════════════════════════════════════════════════ */
 function initHero() {
+  /* Set initial hidden state at runtime so elements show if GSAP CDN fails */
+  gsap.set('.hero-eyebrow, .hero-sub, .hero-cta', { opacity: 0 });
+
   /* Split name into individual char spans (SplitText-style, no plugin needed) */
   document.querySelectorAll('.name-line').forEach(line => {
     line.innerHTML = [...line.textContent]
