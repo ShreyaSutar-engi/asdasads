@@ -438,11 +438,32 @@
       <h2 class="contact-heading" data-reveal>Building something<br>that matters.</h2>
       <p class="contact-sub" data-reveal>Whether you're a researcher, engineer, or just curious — I'd love to talk about hardware, prosthetics, and building things that change lives.</p>
       <div class="contact-btns" data-reveal>
-        <a href="mailto:shreya.sutar057@gmail.com" target="_blank" rel="noopener" class="btn-primary contact-btn">Send a Message ↗</a>
-        <a href="https://instagram.com/shreyshrey48" target="_blank" rel="noopener" class="btn-secondary contact-btn">Instagram ↗</a>
+        <button class="btn-primary contact-btn" onclick="document.getElementById('contactPopup').classList.add('open')">Contact Me</button>
       </div>
     </div>
   </section>
+
+  <!-- Contact popup -->
+  <div class="contact-popup-overlay" id="contactPopup" role="dialog" aria-modal="true" aria-label="Contact options" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="contact-popup">
+      <p class="contact-popup-title">Get in touch</p>
+      <button class="contact-popup-close" aria-label="Close" onclick="document.getElementById('contactPopup').classList.remove('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <a href="mailto:shreya.sutar057@gmail.com" class="contact-popup-row">
+        <span class="contact-popup-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        </span>
+        <span class="contact-popup-handle">shreya.sutar057@gmail.com</span>
+      </a>
+      <a href="https://instagram.com/shreyshrey48" target="_blank" rel="noopener" class="contact-popup-row">
+        <span class="contact-popup-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </span>
+        <span class="contact-popup-handle">@shreyshrey48</span>
+      </a>
+    </div>
+  </div>
 
   <!-- ── Footer ──────────────────────────────────────────── -->
   <footer id="footer">
@@ -475,8 +496,22 @@
       <div class="footer-nav-col">
         <span class="footer-col-label">Contact</span>
         <ul>
-          <li><a href="mailto:shreya.sutar057@gmail.com" target="_blank" rel="noopener">Email ↗</a></li>
-          <li><a href="https://instagram.com/shreyshrey48" target="_blank" rel="noopener">Instagram ↗</a></li>
+          <li>
+            <a href="mailto:shreya.sutar057@gmail.com" class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              </span>
+              shreya.sutar057@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/shreyshrey48" target="_blank" rel="noopener" class="footer-contact-row">
+              <span class="footer-contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+              </span>
+              @shreyshrey48
+            </a>
+          </li>
         </ul>
       </div>
     </div>
