@@ -119,7 +119,7 @@
     <div class="site-wrap">
 
       <div class="detail-img" data-reveal>
-        <img src="prosthetic.png" alt="PandaWare prosthetic hand" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;transform:rotate(-90deg);">
+        <img src="prosthetic.png" alt="PandaWare prosthetic hand" style="position:absolute;top:50%;left:50%;width:100vmax;height:100vmax;max-width:none;object-fit:cover;transform:translate(-50%,-50%) rotate(-90deg);">
       </div>
 
       <div class="detail-hd" data-reveal>
@@ -230,135 +230,151 @@
   <section id="stack">
     <div class="site-wrap">
       <h2 class="sec-label" data-reveal>[ Tech Stack ]</h2>
-      <p class="stack-intro" data-reveal>Every component chosen for a reason. Here’s what powers PandaWare.</p>
+      <p class="stack-intro" data-reveal>Every component chosen for a reason. Here's what powers PandaWare.</p>
 
       <div class="stack-grid">
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 01 ]</span>
-            <span class="stack-cat">Microcontroller</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 01 ]</span>
+              <span class="stack-cat">Microcontroller</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="7" y="7" width="10" height="10" rx="1"/>
+                <path d="M7 9H5M7 12H4M7 15H5M17 9h2M17 12h3M17 15h2M9 7V5M12 7V4M15 7V5M9 17v2M12 17v3M15 17v2"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">RP2040</h3>
+            <p class="stack-desc">Dual-core ARM Cortex-M0+ at 133 MHz. Main compute unit controlling servo PWM output, I²C sensor bus, and real-time EMG acquisition loop.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="7" y="7" width="10" height="10" rx="1"/>
-              <path d="M7 9H5M7 12H4M7 15H5M17 9h2M17 12h3M17 15h2M9 7V5M12 7V4M15 7V5M9 17v2M12 17v3M15 17v2"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">RP2040</h3>
-          <p class="stack-desc">Dual-core ARM Cortex-M0+ at 133 MHz. Main compute unit controlling servo PWM output, I²C sensor bus, and real-time EMG acquisition loop.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 02 ]</span>
-            <span class="stack-cat">Firmware</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 02 ]</span>
+              <span class="stack-cat">Firmware</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">MicroPython</h3>
+            <p class="stack-desc">Python-based firmware running on the RP2040. Handles the full signal processing pipeline, servo control loop, and I²C bus coordination.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="16 18 22 12 16 6"/>
-              <polyline points="8 6 2 12 8 18"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">MicroPython</h3>
-          <p class="stack-desc">Python-based firmware running on the RP2040. Handles the full signal processing pipeline, servo control loop, and I²C bus coordination.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 03 ]</span>
-            <span class="stack-cat">EMG Sensor</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 03 ]</span>
+              <span class="stack-cat">EMG Sensor</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="2 12 5 12 7 4 9 20 11 10 13 14 15 12 22 12"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">MyoWare 2.0</h3>
+            <p class="stack-desc">Surface electromyography sensor capturing forearm muscle activation. Outputs an analog voltage representing muscle contraction intensity for grip detection.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="2 12 5 12 7 4 9 20 11 10 13 14 15 12 22 12"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">MyoWare 2.0</h3>
-          <p class="stack-desc">Surface electromyography sensor capturing forearm muscle activation. Outputs an analog voltage representing muscle contraction intensity for grip detection.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 04 ]</span>
-            <span class="stack-cat">PWM Driver</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 04 ]</span>
+              <span class="stack-cat">PWM Driver</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+                <path d="M6 8h2v4H6zM11 7h2v5h-2zM16 9h2v3h-2z"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">PCA9685</h3>
+            <p class="stack-desc">16-channel PWM/servo driver over I²C. Generates precise servo signals for all 5 finger motors, offloading timing-critical work from the main CPU.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8M12 17v4"/>
-              <path d="M6 8h2v4H6zM11 7h2v5h-2zM16 9h2v3h-2z"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">PCA9685</h3>
-          <p class="stack-desc">16-channel PWM/servo driver over I²C. Generates precise servo signals for all 5 finger motors, offloading timing-critical work from the main CPU.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 05 ]</span>
-            <span class="stack-cat">Current Sensor</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 05 ]</span>
+              <span class="stack-cat">Current Sensor</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 20V10M12 20V4M6 20v-6"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">INA219</h3>
+            <p class="stack-desc">High-side DC current and power sensor over I²C. Monitors servo current draw in real time for closed-loop grip force limiting and object safety.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 20V10M12 20V4M6 20v-6"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">INA219</h3>
-          <p class="stack-desc">High-side DC current and power sensor over I²C. Monitors servo current draw in real time for closed-loop grip force limiting and object safety.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 06 ]</span>
-            <span class="stack-cat">Actuators</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 06 ]</span>
+              <span class="stack-cat">Actuators</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">MG996R Servos</h3>
+            <p class="stack-desc">High-torque metal gear servos, one per finger. Drive tendon cables through 3D-printed finger channels for independent, human-like digit actuation.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">MG996R Servos</h3>
-          <p class="stack-desc">High-torque metal gear servos, one per finger. Drive tendon cables through 3D-printed finger channels for independent, human-like digit actuation.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 07 ]</span>
-            <span class="stack-cat">Fabrication</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 07 ]</span>
+              <span class="stack-cat">Fabrication</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">FDM 3D Printing</h3>
+            <p class="stack-desc">Fused deposition modeling in PLA+. Multiple design iterations per finger joint to refine range of motion, tendon routing, and structural durability.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-              <polyline points="2 17 12 22 22 17"/>
-              <polyline points="2 12 12 17 22 12"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">FDM 3D Printing</h3>
-          <p class="stack-desc">Fused deposition modeling in PLA+. Multiple design iterations per finger joint to refine range of motion, tendon routing, and structural durability.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
         <div class="stack-item" data-reveal>
-          <div class="stack-item-top">
-            <span class="stack-num">[ 08 ]</span>
-            <span class="stack-cat">Mechanism</span>
+          <div class="stack-content">
+            <div class="stack-item-top">
+              <span class="stack-num">[ 08 ]</span>
+              <span class="stack-cat">Mechanism</span>
+            </div>
+            <div class="stack-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="stack-name">Tendon Actuation</h3>
+            <p class="stack-desc">Stainless steel cables routed through finger channels, anchored at fingertip and servo horn. Lightweight, human-analogous flexion with minimal moving parts.</p>
           </div>
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <h3 class="stack-name">Tendon Actuation</h3>
-          <p class="stack-desc">Stainless steel cables routed through finger channels, anchored at fingertip and servo horn. Lightweight, human-analogous flexion with minimal moving parts.</p>
           <div class="stack-img placeholder" aria-hidden="true"></div>
         </div>
 
@@ -424,9 +440,9 @@
   <section id="contact">
     <div class="contact-bg" aria-hidden="true"></div>
     <div class="site-wrap contact-inner">
-      <p class="contact-eyebrow" data-reveal>[ Let’s Connect ]</p>
+      <p class="contact-eyebrow" data-reveal>[ Let's Connect ]</p>
       <h2 class="contact-heading" data-reveal>Building something<br>that matters.</h2>
-      <p class="contact-sub" data-reveal>Whether you’re a researcher, engineer, or just curious — I’d love to talk about hardware, prosthetics, and building things that change lives.</p>
+      <p class="contact-sub" data-reveal>Whether you're a researcher, engineer, or just curious — I'd love to talk about hardware, prosthetics, and building things that change lives.</p>
       <div class="contact-btns" data-reveal>
         <button class="btn-primary contact-btn" onclick="document.getElementById('contactPopup').classList.add('open')">Contact Me</button>
       </div>

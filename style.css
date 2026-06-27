@@ -190,7 +190,7 @@ svg { display: block; }
 .hero-photo {
   width: 380px;
   height: auto;
-  min-height: 340px;
+  min-height: 220px;
   max-height: calc(100vh - var(--nav-h) - var(--s8));
   border-radius: 0;
   border: none;
@@ -484,6 +484,7 @@ svg { display: block; }
   align-items: center;
   justify-content: center;
   margin-bottom: var(--s8);
+  position: relative;
 }
 
 .detail-img svg { width: 4rem; height: 4rem; opacity: 0.15; }
@@ -552,7 +553,7 @@ svg { display: block; }
   border-radius: var(--r);
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .custom-circuit-img {
@@ -566,14 +567,15 @@ svg { display: block; }
   display: flex;
   flex-direction: column;
   gap: var(--s2);
+  flex: 1;
 }
 
-
 .overview-card-img {
-  width: 100%;
-  height: 200px;
+  width: 220px;
+  flex-shrink: 0;
   background: var(--surface-2);
   overflow: hidden;
+  align-self: stretch;
 }
 
 
@@ -649,14 +651,26 @@ svg { display: block; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r);
-  padding: var(--s3);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: var(--s2);
+  position: relative;
   transition: border-color 0.18s;
 }
 
 .stack-item:hover { border-color: var(--border-hi); }
+
+.stack-content {
+  padding: var(--s3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  transition: transform 0.35s ease;
+}
+
+.stack-item:hover .stack-content {
+  transform: translateY(-120px);
+}
 
 
 .stack-item-top {
@@ -707,11 +721,19 @@ svg { display: block; }
 }
 
 .stack-img {
-  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 120px;
-  margin-top: var(--s2);
-  border-radius: var(--r-sm);
+  border-radius: 0;
   overflow: hidden;
+  transform: translateY(120px);
+  transition: transform 0.35s ease;
+}
+
+.stack-item:hover .stack-img {
+  transform: translateY(0);
 }
 
 
@@ -1200,7 +1222,7 @@ svg { display: block; }
 [data-reveal] {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
 [data-reveal].revealed {
