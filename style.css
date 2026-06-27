@@ -188,9 +188,9 @@ svg { display: block; }
 }
 
 .hero-photo {
-  width: 380px;
-  height: auto;
-  min-height: 220px;
+  width: 480px;
+  height: 340px;
+  min-height: unset;
   max-height: calc(100vh - var(--nav-h) - var(--s8));
   border-radius: 0;
   border: none;
